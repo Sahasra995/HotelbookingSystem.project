@@ -123,4 +123,24 @@ public class Hotel
         bw.write(String.format("Rate Per Night: %.2f", ratePerNight));
         bw.newLine();
     }
+    // Static Array Method: returns roomNo of booking with maximum nights
+    // Rule: Ignores null elements. If two stays are equal, the booking that appears first in the file wins.
+    public static int findLongestStay(Hotel[] bookings) {
+      if (bookings == null || bookings.length == 0) {
+          return -1;
+      }
+     
+      int maxNights = -1;
+      int roomWithLongestStay = -1;
+
+      for (Hotel booking : bookings) {
+         if (booking != null) {
+             if (booking.getNights() > maxNights) {
+                 maxNights = booking.getNights();
+                 roomWithLongestStay = booking.getRoomNo();
+             }
+         }
+     }
+     return roomWithLongestStay;
+ }
 }

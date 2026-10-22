@@ -1,0 +1,9 @@
+8
+H, 101, Ravi Kumar, 3, 3000, true
+H, 102, Sita Devi, 2, 3500, false
+S, 501, Anil Rao, 7, 9000, 10, true
+S, 502, Meena Iyer, 4, 12000, 8, false
+H, 103, Kiran, 5, 2800, true
+S, 503, Bad Suite, 0, 10000, 10, true
+S, 504, Bad Charge, 3, 9000, 150, false
+H, 104, Bad Rate, 2, 0, false

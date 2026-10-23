@@ -2,7 +2,9 @@ package hotel;
 
 public class EmptyInputFileException extends Exception
 {
-    public EmptyInputFileException(String message) 
+    private static final long serialVersionUID = 1L;
+
+	public EmptyInputFileException(String message) 
     {
         super(message);
     }

@@ -5,42 +5,40 @@ import java.io.IOException;
 
 public class Hotel 
 {
-    
+
     private int roomNo;
     private String guestName;
     private int nights;
     private double ratePerNight;
 
-   
     public static String hotelName = "Grand Resort";
     public static double tourismTaxRate = 0.12;
     public static double breakfastCharge = 350.0;
     public static int bookingCount = 0;
 
-    
     public Hotel() 
     {
         bookingCount++;
     }
 
-    
-    public Hotel(int roomNo, String guestName, int nights) throws InvalidNightsException 
+    public Hotel(int roomNo, String guestName, int nights) throws InvalidNightsException
     {
-        this();
         setRoomNo(roomNo);
         setGuestName(guestName);
         setNights(nights);
+        bookingCount++;
     }
 
-   
-    public Hotel(int roomNo, String guestName, int nights, double ratePerNight) 
+    public Hotel(int roomNo, String guestName, int nights, double ratePerNight)
             throws InvalidNightsException, InvalidRateException 
     {
-        this(roomNo, guestName, nights);
+        setRoomNo(roomNo);
+        setGuestName(guestName);
+        setNights(nights);
         setRatePerNight(ratePerNight);
+        bookingCount++;
     }
 
-    
     public int getRoomNo() 
     {
         return roomNo;
@@ -66,10 +64,9 @@ public class Hotel
         return nights;
     }
 
-    public void setNights(int nights) throws InvalidNightsException
+    public void setNights(int nights) throws InvalidNightsException 
     {
-        if (nights < 1) 
-        {
+        if (nights < 1) {
             throw new InvalidNightsException("Nights must be >= 1. Provided: " + nights, nights);
         }
         this.nights = nights;
@@ -80,7 +77,7 @@ public class Hotel
         return ratePerNight;
     }
 
-    public void setRatePerNight(double ratePerNight) throws InvalidRateException
+    public void setRatePerNight(double ratePerNight) throws InvalidRateException 
     {
         if (ratePerNight <= 0) 
         {
@@ -89,7 +86,6 @@ public class Hotel
         this.ratePerNight = ratePerNight;
     }
 
-    
     public double calculateBill() 
     {
         return nights * ratePerNight * (1.0 + tourismTaxRate);
@@ -98,7 +94,8 @@ public class Hotel
     public double calculateBill(boolean includeBreakfast) 
     {
         double total = calculateBill();
-        if (includeBreakfast) {
+        if (includeBreakfast) 
+        {
             total += (breakfastCharge * nights);
         }
         return total;
@@ -113,7 +110,8 @@ public class Hotel
         return other.roomNo;
     }
 
-    public void display(BufferedWriter bw) throws IOException {
+    public void display(BufferedWriter bw) throws IOException 
+    {
         bw.write("Room No: " + roomNo);
         bw.newLine();
         bw.write("Guest Name: " + guestName);
@@ -123,24 +121,29 @@ public class Hotel
         bw.write(String.format("Rate Per Night: %.2f", ratePerNight));
         bw.newLine();
     }
-    // Static Array Method: returns roomNo of booking with maximum nights
-    // Rule: Ignores null elements. If two stays are equal, the booking that appears first in the file wins.
-    public static int findLongestStay(Hotel[] bookings) {
-      if (bookings == null || bookings.length == 0) {
-          return -1;
-      }
-     
-      int maxNights = -1;
-      int roomWithLongestStay = -1;
 
-      for (Hotel booking : bookings) {
-         if (booking != null) {
-             if (booking.getNights() > maxNights) {
-                 maxNights = booking.getNights();
-                 roomWithLongestStay = booking.getRoomNo();
-             }
-         }
-     }
-     return roomWithLongestStay;
- }
+    
+    public static int findLongestStay(Hotel[] bookings) 
+    {
+        if (bookings == null || bookings.length == 0)
+        {
+            return -1;
+        }
+
+        int maxNights = -1;
+        int roomWithLongestStay = -1;
+
+        for (Hotel booking : bookings)
+        {
+            if (booking != null) 
+            {
+                if (booking.getNights() > maxNights) 
+                {
+                    maxNights = booking.getNights();
+                    roomWithLongestStay = booking.getRoomNo();
+                }
+            }
+        }
+        return roomWithLongestStay;
+    }
 }

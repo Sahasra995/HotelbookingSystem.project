@@ -1,0 +1,8 @@
+=== Execution Log: 2026-10-23T19:23:15.237383 ===
+Line 7 | Error: InvalidNightsException | Message: Nights must be >= 1. Provided: 0 | Raw Data: [S, 503, Bad Suite, 0, 10000, 10, true]
+Line 8 | Error: InvalidServiceChargeException | Message: Service charge percent must be between 0 and 100: 150.0 | Raw Data: [S, 504, Bad Charge, 3, 9000, 150, false]
+Line 9 | Error: InvalidRateException | Message: Rate per night must be > 0. Provided: 0.0 | Raw Data: [H, 104, Bad Rate, 2, 0, false]
+=== Execution Log: 2026-10-23T19:25:08.526703 ===
+Line 7 | Error: InvalidNightsException | Message: Nights must be >= 1. Provided: 0 | Raw Data: [S, 503, Bad Suite, 0, 10000, 10, true]
+Line 8 | Error: InvalidServiceChargeException | Message: Service charge percent must be between 0 and 100: 150.0 | Raw Data: [S, 504, Bad Charge, 3, 9000, 150, false]
+Line 9 | Error: InvalidRateException | Message: Rate per night must be > 0. Provided: 0.0 | Raw Data: [H, 104, Bad Rate, 2, 0, false]

@@ -2,7 +2,9 @@ package hotel;
 
 public class InvalidServiceChargeException extends RuntimeException 
 {
-    public InvalidServiceChargeException(String message) 
+    private static final long serialVersionUID = 1L;
+
+	public InvalidServiceChargeException(String message) 
     {
         super(message);
     }

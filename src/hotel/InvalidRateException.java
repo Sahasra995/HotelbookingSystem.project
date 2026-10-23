@@ -2,7 +2,9 @@ package hotel;
 
 public class InvalidRateException extends Exception 
 {
-    public InvalidRateException(String message) 
+    private static final long serialVersionUID = 1L;
+
+	public InvalidRateException(String message) 
     {
         super(message);
     }

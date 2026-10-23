@@ -2,7 +2,8 @@ package hotel;
 
 		public class InvalidNightsException extends Exception 
    {
-		    private int invalidNights;
+		    private static final long serialVersionUID = 1L;
+			private int invalidNights;
 
 		    public InvalidNightsException(String message) 
 		    {

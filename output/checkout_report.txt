@@ -1,0 +1,45 @@
+==================================================
+             HOTEL CHECKOUT REPORT                
+==================================================
+Room No: 101
+Guest Name: Ravi Kumar
+Nights: 3
+Rate Per Night: 3000.00
+Calculated Bill: Rs.11130.00
+--------------------------------------------------
+Room No: 102
+Guest Name: Sita Devi
+Nights: 2
+Rate Per Night: 3500.00
+Calculated Bill: Rs.7840.00
+--------------------------------------------------
+Room No: 501
+Guest Name: Anil Rao
+Nights: 7
+Rate Per Night: 9000.00
+Service Charge Percent: 10.00%
+Jacuzzi Included: Yes
+Calculated Bill: Rs.80360.00
+Loyalty Discount: Rs.8036.00
+Net Payable: Rs.72324.00
+--------------------------------------------------
+Room No: 502
+Guest Name: Meena Iyer
+Nights: 4
+Rate Per Night: 12000.00
+Service Charge Percent: 8.00%
+Jacuzzi Included: No
+Calculated Bill: Rs.57600.00
+Loyalty Discount: Rs.0.00
+Net Payable: Rs.57600.00
+--------------------------------------------------
+Room No: 103
+Guest Name: Kiran
+Nights: 5
+Rate Per Night: 2800.00
+Calculated Bill: Rs.17430.00
+--------------------------------------------------
+Longer stay between first two rooms: Room 101
+Room with the overall longest stay: Room 501
+Total bookings successfully created: 8
+Records read: 8, accepted: 5, rejected: 3.

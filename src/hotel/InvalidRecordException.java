@@ -2,7 +2,9 @@ package hotel;
 
 public class InvalidRecordException extends Exception 
 {
-    public InvalidRecordException(String message) 
+    private static final long serialVersionUID = 1L;
+
+	public InvalidRecordException(String message) 
     {
         super(message);
     }
